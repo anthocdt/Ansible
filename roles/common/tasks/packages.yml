@@ -1,6 +1,6 @@
 ---
-- name: install ntpdate
+- name: install gedit
   package:
-    name: ntpdate
+    name: gedit
     state: present
     
