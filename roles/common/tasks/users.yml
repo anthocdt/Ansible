@@ -1,10 +1,10 @@
 ---
-#- name: Ensure group "itesciadm" exists
-#  group:
-#    name: itesciadmin
-#    gid: 1001
-#    state: present
-#
+- name: Ensure group "itesciadm" exists
+  group:
+    name: itesciadmin
+    gid: 1002
+    state: present
+
 - name: Add the user 'itesciadmin' with a home, a specific uid, groups, password not set.
   user: 
     name: itesciadmin
