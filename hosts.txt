@@ -3,7 +3,10 @@ database
 web
 
 [database]
-192.168.247.130	ansible_connection=ssh	ansible_user=itescia
+192.168.247.133
 
 [web]
-192.168.247.133	ansible_connection=ssh	ansible_user=itescia
+192.168.247.130
+
+[all:vars]
+ansible_user=itescia
