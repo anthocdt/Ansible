@@ -7,6 +7,12 @@
     group: 1001
     groups: itescia,sudo
     password: NOT_LOGGING_PASSWORD
-    ssh_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAfCo4RCJH8ao5VUYVbTz964GxAb5jwoUR6+ka/Jx+RyE9he3cbBtjQrPKE6Z/ftqy5YyZusg0uHnYz/8kwB/NLTKBg61jJFjn+gR5I0bRYRJQDYRjeR84ERIyP2In/OEerpzK7VEIshTydEzVoOJVZBixo7C33v7f7ZCBIofmyWR/BkyW680nQS4BkERt2UC3enlH80XRXMRbFV2aCz0364qUQpvRZdllCxZTpFja7Mbxu6AIW/IIc0hOOAuvj2eMGK/aUlZn/x1PUI/JHjkzTI+dtZlAv2mkPIY6LDWaRGbZGZJtyhXusuhV3liN8am3ZkTtvy2JFgbFIf811Ffv itescia@anthonyubuntu3
     state: present
+
+- name: Set authorized key, removing all the authorized keys already set
+  authorized_key:
+    user: root
+    key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAfCo4RCJH8ao5VUYVbTz964GxAb5jwoUR6+ka/Jx+RyE9he3cbBtjQrPKE6Z/ftqy5YyZusg0uHnYz/8kwB/NLTKBg61jJFjn+gR5I0bRYRJQDYRjeR84ERIyP2In/OEerpzK7VEIshTydEzVoOJVZBixo7C33v7f7ZCBIofmyWR/BkyW680nQS4BkERt2UC3enlH80XRXMRbFV2aCz0364qUQpvRZdllCxZTpFja7Mbxu6AIW/IIc0hOOAuvj2eMGK/aUlZn/x1PUI/JHjkzTI+dtZlAv2mkPIY6LDWaRGbZGZJtyhXusuhV3liN8am3ZkTtvy2JFgbFIf811Ffv itescia@anthonyubuntu3'
+    state: present
+    exclusive: True
 
