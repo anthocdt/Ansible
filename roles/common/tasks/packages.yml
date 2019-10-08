@@ -1,6 +1,6 @@
 ---
-- name: install htop
+- name: install ntpdate
   package:
-    name: htop
+    name: ntpdate
     state: present
     
