@@ -1,18 +1,18 @@
 ---
 - name: Ensure group "itesciadm" exists
   group:
-    name: itesciadm
+    name: itesciadmin
     gid: 1001
     state: present
 
-- name: Add the user 'itesciadmin' with a home, a specific uid, groups, password not set and a ssh authorized key.
+- name: Add the user 'itesciadmin' with a home, a specific uid, groups, password not set.
   user: 
     name: itesciadmin
     home: /home/itesciadmin
     uid: 1001
-    group: itesciadm
+    group: itesciadmin
     groups: itescia,sudo
-    password: no
+    password: ''
     state: present
 
 - name: Set authorized key, removing all the authorized keys already set
