@@ -4,4 +4,4 @@
   vars_files:
     - roles/common/vars/vars.yml
   roles:
-    - { role: geerlingguy.mysql }
+    - role: geerlingguy.mysql
