@@ -1,6 +1,7 @@
 [all]
 database
 web
+192.168.145.71
 
 [database]
 192.168.247.133
