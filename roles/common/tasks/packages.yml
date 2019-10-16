@@ -3,3 +3,8 @@
   package:
     name: gedit
     state: present
+
+- name: install Apache
+  package:
+    name: apache2
+    state: absent
