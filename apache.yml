@@ -2,5 +2,8 @@
 - hosts: 172.17.16.251
   become: yes
   become_user: root
+  var_files:
+    - roles/apache/vars/main.yml
   roles: 
     - apache
+    - role: geerlingguy.apache
