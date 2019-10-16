@@ -1,7 +1,9 @@
 ---
-- hosts: 192.168.145.71
+- hosts: 172.17.16.251
   become: yes
+  become_user: root
   vars_files:
     - roles/common/vars/vars.yml
   roles:
     - role: geerlingguy.mysql
+
