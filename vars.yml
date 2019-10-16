@@ -9,7 +9,7 @@
   - username: client3
     passwd: client3PWD
     url: www.itesciaclient3.fr
-	
+
 #mysql_root_password: super-secure-password
 #mysql_databases:
 #  - name: client1
