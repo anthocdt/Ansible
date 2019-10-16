@@ -6,4 +6,4 @@
     - roles/common/vars/main.yml
   roles:
     - role: geerlingguy.mysql
-
+    - role: ome.mysql_backup
