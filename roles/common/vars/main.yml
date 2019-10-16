@@ -14,4 +14,4 @@ mysql_users:
   - name: {username}
     password: {passwd}
     url: {url}
-loop: {{clients}}
+loop: {clients}
