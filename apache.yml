@@ -1,0 +1,6 @@
+---
+- hosts: 172.17.16.251
+  become: yes
+  become_user: root
+  roles: 
+    - apache
