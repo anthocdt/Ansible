@@ -4,21 +4,3 @@
   become_user: root
   roles: 
     - common
-  tasks: 
-   - name: Création des databases et users
-     mysql_root_password: super-secure-password
-     mysql_databases:
-      - name: client1
-        encoding: latin1
-        collation: latin1_general_ci
-      - name: client2
-        encoding: latin1
-        collation: latin1_general_ci
-      - name: client3
-        encoding: latin1
-        collation: latin1_general_ci
-      - mysql_users:
-        - name: "{{username}}"
-          password: "{{passwd}}"
-          url: "{{url}}"
-        loop: "{{clients}}"
