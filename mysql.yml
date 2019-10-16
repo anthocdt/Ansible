@@ -3,7 +3,7 @@
   become: yes
   become_user: root
   vars_files:
-    - roles/common/vars/vars.yml
+    - roles/common/vars/main.yml
   roles:
     - role: geerlingguy.mysql
 
