@@ -1,9 +1,9 @@
 ---
-#- name: Create group "itesciadm" exists.
-#  group:
-#    name: itesciadmin
-#    gid: 1002
-#    state: present
+- name: Create group "itesciadm" exists.
+  group:
+    name: itesciadmin
+    gid: 1002
+    state: present
 
 - name: Add the user 'itesciadmin' with a home, a specific uid, groups, password not set.
   user: 
@@ -11,7 +11,6 @@
     home: /home/itesciadmin
     uid: 1001
     group: itesciadmin
-    groups: itescia,sudo
     password: ''
     state: present
 
