@@ -1,5 +1,5 @@
 ---
-- hosts: database,backup
+- hosts: 172.16.203.135,172.16.203.59,172.16.203.134
   become: yes
   become_user: root
   vars_files:
