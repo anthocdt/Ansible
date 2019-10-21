@@ -1,31 +1,31 @@
 ---
-- name: Create group "itesciadm" exists.
-  group:
-    name: itesciadmin
-    gid: 1002
-    state: present
+#- name: Create group "itesciadm" exists.
+#  group:
+#    name: itesciadmin
+#    gid: 1002
+#    state: present
 
-- name: Add the user 'itesciadmin' with a home, a specific uid, groups, password not set.
-  user: 
-    name: itesciadmin
-    home: /home/itesciadmin
-    uid: 1001
-    group: itesciadmin
-    groups: itescia,sudo
-    password: ''
-    state: present
-
-- name: Set authorized key.
-  authorized_key:
-    user: itesciadmin
-    key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAfCo4RCJH8ao5VUYVbTz964GxAb5jwoUR6+ka/Jx+RyE9he3cbBtjQrPKE6Z/ftqy5YyZusg0uHnYz/8kwB/NLTKBg61jJFjn+gR5I0bRYRJQDYRjeR84ERIyP2In/OEerpzK7VEIshTydEzVoOJVZBixo7C33v7f7ZCBIofmyWR/BkyW680nQS4BkERt2UC3enlH80XRXMRbFV2aCz0364qUQpvRZdllCxZTpFja7Mbxu6AIW/IIc0hOOAuvj2eMGK/aUlZn/x1PUI/JHjkzTI+dtZlAv2mkPIY6LDWaRGbZGZJtyhXusuhV3liN8am3ZkTtvy2JFgbFIf811Ffv itescia@anthonyubuntu3'
-    state: present
+#- name: Add the user 'itesciadmin' with a home, a specific uid, groups, password not set.
+#  user: 
+#    name: itesciadmin
+#    home: /home/itesciadmin
+#    uid: 1001
+#    group: itesciadmin
+#    groups: itescia,sudo
+#    password: ''
+#    state: present
 
 - name: Set authorized key.
   authorized_key:
     user: itesciadmin
-    key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDTufQf+lajKSgsQnACYyO6gbxs1+tPknaLzcFodOLDIrJWoGHFZEMN94c7rIzp39goiap4JCwG+OfcpBO8482XaauU8HoN88zp0mSEcCk0RjLYcmhxNq7gmAPQROLq44/Q4g9mgOy44JDd3wUYa3UrmfuGEYdilyjhH7EtVZsd7tm72fgbqaMDc5bl8ZOXVr96n/BMvHbHUO5YLqKrWkDMWTuFLzdW3fXQzcvPRMTeAPE7XobZGHhXgZUrAfN3ePERPYz27EWa729XgN1NUUJR8PjPAtkgI41/VFB/n3b995prSI1dRSGtOcOzgT/2krSORtq4W6uvHOuYGXXJT0dz itescia@itescia'
+    key:'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9KdrE9gZpoeV1JKbfS0NiEfEkSOpVBlF2axpRf/ZnnyQduOqzgq44pffzglSJENwClsEq+e9HHWLengGqgMowerIcDPMkqRuh/dnxKT8KXJeduys2fyBM06VSKr7Y6RqHhLEZmTaJUKv4K1Q46oIhjUKhURPZmDGD9zIrRtErBl7HPIPts+aco50spn2aI2O6xO0gTbkrKWjwwZT6Jm/qosrfDxgTXKXM3hDks1mVWgxiHfP9VE2QrkWbCvAHH0yYuSvxkKB+XOq4iTKDr8M6z6Ob0tMaFQ/UgQSMphkCjKTe1IEGOh7BN46i5q+H0JJaYqyFbfMzhUWUcbUkRGNT root@itescia'
     state: present
+
+    #- name: Set authorized key.
+    #authorized_key:
+    #user: itesciadmin
+    #key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDTufQf+lajKSgsQnACYyO6gbxs1+tPknaLzcFodOLDIrJWoGHFZEMN94c7rIzp39goiap4JCwG+OfcpBO8482XaauU8HoN88zp0mSEcCk0RjLYcmhxNq7gmAPQROLq44/Q4g9mgOy44JDd3wUYa3UrmfuGEYdilyjhH7EtVZsd7tm72fgbqaMDc5bl8ZOXVr96n/BMvHbHUO5YLqKrWkDMWTuFLzdW3fXQzcvPRMTeAPE7XobZGHhXgZUrAfN3ePERPYz27EWa729XgN1NUUJR8PjPAtkgI41/VFB/n3b995prSI1dRSGtOcOzgT/2krSORtq4W6uvHOuYGXXJT0dz itescia@itescia'
+    #state: present
 
 #- name: Delete user 'itesciadmin'.
 #  user: 
