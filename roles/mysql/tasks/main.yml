@@ -10,5 +10,5 @@
   become: yes
   template:
     src: etc-crond-mysql-backup.j2
-    dest: /etc/cron.30/mysql-backup
+    dest: /etc/cron.daily/mysql-backup
     mode: 0755

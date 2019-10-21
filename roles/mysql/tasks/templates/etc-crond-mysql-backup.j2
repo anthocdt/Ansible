@@ -1,14 +1,6 @@
 #!/usr/bin/bash
 # Dump all MySQL/MariaDB databases
 
-<<<<<<< HEAD
-OUTPUT="{{ mysql_backup_dir | quote }}/$(date +{{ mysql_backup_filename_format | quote }})"
-/usr/bin/mysqldump --all-databases -r "$OUTPUT.tmp"
-
-size=$(stat -c%s "$OUTPUT.tmp")
-if [ $size -lt {{ mysql_backup_minimum_expected_size }} ]; then
-    echo "ERROR: Database backup '$OUTPUT.tmp' is less than {{ mysql_backup_minimum_expected_size }} bytes"
-=======
 OUTPUT=" "/var/backups/databases" /$(date + "backup_databases -%Y%m%d.mysqldump")"
 /usr/bin/mysqldump --all-databases -r "$OUTPUT.tmp"
 
