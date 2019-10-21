@@ -6,7 +6,7 @@ OUTPUT=" "/var/backups/databases" /$(date + "backup_databases -%Y%m%d.mysqldump"
 
 size=$(stat -c%s "$OUTPUT.tmp")
 if [ $size -lt 100000 ]; then
-    echo "ERROR: Database backup '$OUTPUT.tmp' is less than {{ mysql_backup_minimum_expected_size }} bytes"
+    echo "ERROR: Database backup '$OUTPUT.tmp' is less than 100000 bytes"
     exit 2
 fi
 
