@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: database,backup
   become: yes
   become_user: root
   vars_files:
