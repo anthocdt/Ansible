@@ -6,7 +6,8 @@
     - roles/mysql/vars/vars.yml
   roles:
     - role: geerlingguy.mysql
-    - role: ome.mysql_backup
-      mysql_backup_dir: /var/backups/database
-      mysql_backup_filename_format: "backup_databases -%Y%m%d.mysqldump"
-      mysql_backup_minimum_expected_size: 100000
+    - mysql
+#    - role: ome.mysql_backup
+ #     mysql_backup_dir: /var/backups/database
+  #    mysql_backup_filename_format: "backup_databases -%Y%m%d.mysqldump"
+   #   mysql_backup_minimum_expected_size: 100000
