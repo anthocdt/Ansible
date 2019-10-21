@@ -1,3 +1,4 @@
+---
 apache_listen_port: 8080
 apache_vhosts:
-  - {servername: "itesciaclient1.com", documentroot: "/var/www/vhosts/itesciaclient1_com"}
+  - {servername: "client1.com", documentroot: "/var/www/vhosts/client1_com"}
