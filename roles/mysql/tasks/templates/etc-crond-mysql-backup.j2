@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+# Dump all MySQL/MariaDB databases
+
+OUTPUT=" "/var/backups/databases" /$(date + "backup_databases -%Y%m%d.mysqldump")"
+/usr/bin/mysqldump --all-databases -r "$OUTPUT.tmp"
+
+size=$(stat -c%s "$OUTPUT.tmp")
+if [ $size -lt 100000 ]; then
+    echo "ERROR: Database backup '$OUTPUT.tmp' is less than 100000 bytes"
+>>>>>>> 95592553c2a086c338a14825a51f47cb414876a4
+    exit 2
+fi
+
+mv "$OUTPUT.tmp" "$OUTPUT"
