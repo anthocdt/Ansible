@@ -1,0 +1,6 @@
+---
+- name: Add a line to hosts file
+  lineinfile:
+    path: /etc/hosts
+    insertafter: '^127.0.0.1 localhost'
+    line: 172.16.203.135 srv_master
