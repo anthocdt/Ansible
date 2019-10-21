@@ -1,5 +1,5 @@
 ---
-- hosts: 172.17.203.79
+- hosts: 172.16.203.79
   become: yes
   become_user: root
   vars_files:
