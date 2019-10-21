@@ -1,8 +1,8 @@
 ---
-- hosts: 172.17.203.79
+- hosts: 172.16.203.79
   become: yes
   become_user: root
-  var_files:
+  vars_files:
     - roles/apache/vars/main.yml
   roles: 
     - apache

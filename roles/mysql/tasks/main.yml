@@ -1,12 +1,14 @@
 ---
-- name: Create mysql database
-  mysql_db: name={{ wp_mysql_db }} state=present
+- name: mysql backup | create backup directory
   become: yes
+  file:
+    path: "/var/backups/database"
+    recurse: yes
+    state: directory
 
-- name: Create mysql user
-  mysql_user: 
-    name={{ wp_mysql_user }} 
-    password={{ wp_mysql_password }} 
-    priv=*.*:ALL
-
-  become: yes  
+- name: mysql backup | create cron job
+  become: yes
+  template:
+    src: etc-crond-mysql-backup.j2
+    dest: /etc/cron.daily/mysql-backup
+    mode: 0755

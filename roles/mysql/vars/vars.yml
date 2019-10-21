@@ -2,13 +2,13 @@
 - clients:
   - username: client1
     passwd: client1PWD
-    url: www.itesciaclient1.fr
+    url: www.client1.com
   - username: client2
     passwd: client2PWD
-    url: www.itesciaclient2.fr
+    url: www.client2.com
   - username: client3
     passwd: client3PWD
-    url: www.itesciaclient3.fr
+    url: www.client3.com
 
 #mysql_root_password: super-secure-password
 #mysql_databases:

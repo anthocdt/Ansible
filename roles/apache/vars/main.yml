@@ -1,4 +1,5 @@
 ---
 apache_listen_port: 8080
 apache_vhosts:
-  - {servername: "client1.com", documentroot: "/var/www/vhosts/client1_com"}
+        - {servername: "client1.com", documentroot: "/var/www/vhosts/client1_com", serveralias: "www.client1.com"}
+  - {servername: "client2.com", documentroot: "/var/www/vhosts/client2_com"}  
